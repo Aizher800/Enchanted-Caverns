@@ -25,7 +25,10 @@ public class SwipeCharacter : MonoBehaviour
            GameObject GO = Instantiate(characterPrefab, transform.position, Quaternion.identity);
            GO.transform.SetParent(transform);
            animator = GO.GetComponent<Animator>();
-       }
+       } else
+        {
+            animator = this.GetComponent<Animator>();
+        }
     }
 
     void Update()

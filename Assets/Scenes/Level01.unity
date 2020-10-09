@@ -4350,7 +4350,7 @@ PrefabInstance:
     - target: {fileID: 9025162744169830702, guid: 57c111db04d160f4d9af4b39f335da73,
         type: 3}
       propertyPath: isDesktop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c111db04d160f4d9af4b39f335da73, type: 3}
