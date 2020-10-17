@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8792667547498937341}
   - component: {fileID: 8792667547498937340}
   - component: {fileID: 567637624}
+  - component: {fileID: 145615982820725508}
   - component: {fileID: 1889855022}
   m_Layer: 0
   m_Name: Player
@@ -114,8 +115,22 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   textHealth: {fileID: 0}
+--- !u!114 &145615982820725508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792667547498937338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a3bf9b7224d384bb3b95454cd0320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8792667547498937338}
   coins: 0
-  index: 1
+  key: 0
+  respawnLocation: {fileID: 0}
   textCoins: {fileID: 0}
 --- !u!212 &1889855022
 SpriteRenderer:

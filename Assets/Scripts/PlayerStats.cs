@@ -15,10 +15,6 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth;
     public TextMeshProUGUI textHealth;
 
-    public int coins = 0;
-    public int index = 1;
-    public TextMeshProUGUI textCoins;
-
     void Start()
     {
         health = maxHealth;   //sets up max health upon start of game
@@ -51,23 +47,5 @@ public class PlayerStats : MonoBehaviour
         {
             Destroy(player); // destroys object with no health after taking dmg
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.transform.tag == "Coin")
-        {
-            coins++;
-            textCoins.text = coins.ToString();
-            Debug.Log(coins);
-        }
-        if (other.transform.tag == "Door")
-        {
-            index++;
-            SceneManager.LoadScene(index);
-            Debug.Log("You're in Level " + index);
-            DontDestroyOnLoad(this.gameObject);
-        }
-        
     }
 }
