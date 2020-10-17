@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8792667547498937342}
   - component: {fileID: 8792667547498937341}
   - component: {fileID: 8792667547498937340}
-  - component: {fileID: 8792667547498937343}
   - component: {fileID: 567637624}
   - component: {fileID: 1889855022}
   m_Layer: 0
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8792667547498937338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 2.93, y: 0.9, z: -2.6015625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8792667548275072256}
@@ -50,7 +49,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: -0.014374852, y: -0.413751}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -61,7 +60,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7212503, y: 0.5462588}
   m_EdgeRadius: 0
 --- !u!50 &8792667547498937341
 Rigidbody2D:
@@ -99,19 +98,6 @@ MonoBehaviour:
   distMoved: 0.025
   deadZone: 0.4
   turnPerSec: 0.2
---- !u!114 &8792667547498937343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8792667547498937338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a317b64ccaa1b0347aea034ca5e506f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangedAtt: {fileID: 0}
 --- !u!114 &567637624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8792667547498937338}
+  health: 0
+  maxHealth: 100
   textHealth: {fileID: 0}
   coins: 0
+  index: 1
   textCoins: {fileID: 0}
 --- !u!212 &1889855022
 SpriteRenderer:

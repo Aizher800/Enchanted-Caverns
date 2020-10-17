@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI textHealth;
 
     public int coins = 0;
+    public int index = 1;
     public TextMeshProUGUI textCoins;
 
     void Start()
@@ -59,5 +61,13 @@ public class PlayerStats : MonoBehaviour
             textCoins.text = coins.ToString();
             Debug.Log(coins);
         }
+        if (other.transform.tag == "Door")
+        {
+            index++;
+            SceneManager.LoadScene(index);
+            Debug.Log("You're in Level " + index);
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
     }
 }
