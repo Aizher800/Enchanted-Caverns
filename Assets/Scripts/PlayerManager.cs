@@ -24,12 +24,12 @@ public class PlayerManager : MonoBehaviour
         }
         if (other.transform.tag == "Door")
         {
-            if (key == 1) // getting a key will unlock the door, which will remove the key and bring player to the next level and teleporting the player to a spawn point
+            if (key >= 1) // getting a key will unlock the door, which will remove the key and bring player to the next level and teleporting the player to a spawn point
             {
                 key--;
                 Debug.Log("Keys = " + key);
                 index++;
-                SceneManager.LoadScene(index);
+                //SceneManager.LoadScene(index);
                 player.transform.position = respawnLocation.position;
                 //Debug.Log("You're in Level " + index);
             }
@@ -44,5 +44,9 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Keys= " + key);
         }
         DontDestroyOnLoad(this.gameObject); // keep this object when moving to different scenes
+    }
+    void clearLevel()
+    {
+
     }
 }
