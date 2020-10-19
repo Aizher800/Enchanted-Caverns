@@ -15,21 +15,28 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth;
     public TextMeshProUGUI textHealth;
 
+    public GameObject Canvas;
+    public GameObject mainCamera;
+    public GameObject spawnPoint;
+
     void Start()
     {
-        health = maxHealth;   //sets up max health upon start of game
+        health = maxHealth;
+    }
+    void Update()
+    {
         textHealth.text = health.ToString();
     }
 
-    public void DmgDealt(float damage)
+    public void DmgDealt()
     {
-        health -= damage; // any obj that triggers it to lose health, will drop its health
+        health--; // any obj that triggers it to lose health, will drop its health
         CheckDeath();
     }
 
-    private void HealPlayer(float heal)
+    private void HealPlayer()
     {
-        health += heal;
+        health++;
         healthOverheal();
     }
 
@@ -37,7 +44,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (health > maxHealth)
         {
-            health = maxHealth; // if object gets healed, can only heal till maxHealth (can't get over 11 if 10 is maxHealth)
+            health = maxHealth; // if object gets healed, can only heal till maxHealth or it will be ignored
         }
     }
 
@@ -45,7 +52,19 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(player); // destroys object with no health after taking dmg
+            Destroy(Canvas);
+            Destroy(player);
+            Destroy(mainCamera);
+            Destroy(spawnPoint);
+            SceneManager.LoadScene("Game Over");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collide)
+    {
+        if (collide.transform.tag == "Enemy")
+        {
+            DmgDealt();
         }
     }
 }

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e054a9e8dcd5b445a83cd12239e75a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distMoved: 0.025
+  distMoved: 0.04
   deadZone: 0.4
   turnPerSec: 0.2
 --- !u!114 &567637624
@@ -113,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8792667547498937338}
   health: 0
-  maxHealth: 100
+  maxHealth: 1
   textHealth: {fileID: 0}
+  Canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &145615982820725508
 MonoBehaviour:
   m_ObjectHideFlags: 0

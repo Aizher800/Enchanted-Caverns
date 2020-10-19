@@ -9,6 +9,7 @@ TagManager:
   - Door
   - SpawnPoint
   - Key
+  - Enemy
   layers:
   - Default
   - TransparentFX

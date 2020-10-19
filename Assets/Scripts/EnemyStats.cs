@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public float health;
-    public float maxHealth;
+/*    public float health;
+    public float maxHealth;*/
 
     public GameObject dropLoot;
 
-    void Start()
+/*    void Start()
     {
         health = maxHealth;   //sets up max health upon start of game
     }
 
-    public void DmgDealt(float damage) 
+    public void DmgDealt(float damage)
     {
         health -= damage; // any obj that triggers it to lose health, will drop its health
-        CheckDeath(); 
+        CheckDeath();
     }
     private void HealEnemy(float heal)
     {
@@ -38,6 +38,15 @@ public class EnemyStats : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject); // destroys object with no health after taking dmg
+            Instantiate(dropLoot, transform.position, Quaternion.identity);
+        }
+    }*/
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            Destroy(gameObject);
             Instantiate(dropLoot, transform.position, Quaternion.identity);
         }
     }

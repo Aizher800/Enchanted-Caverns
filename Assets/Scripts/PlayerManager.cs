@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
             if (key == 1) // getting a key will unlock the door, which will remove the key and bring player to the next level and teleporting the player to a spawn point
             {
                 key--;
-                Debug.Log("Keys= " + key);
+                Debug.Log("Keys = " + key);
                 index++;
                 SceneManager.LoadScene(index);
                 player.transform.position = respawnLocation.position;
