@@ -11,17 +11,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject Canvas;
     public GameObject Player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
@@ -41,14 +30,20 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        Destroy(Camera);
-        Destroy(Canvas);
-        Destroy(Player);
+        DoNotKeep();
+
     }
 
     public void ExitGame()
     {
         Debug.Log("You've clicked Exit!");
         //Application.Quit();
+    }
+
+    public void DoNotKeep()
+    {
+        Destroy(Camera);
+        Destroy(Canvas);
+        Destroy(Player);
     }
 }

@@ -8,10 +8,12 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject player;
     public int coins = 0;
-    private int index = 1;
+    //private int index = 1;
     public int key;
     public Transform respawnLocation;
     public TextMeshProUGUI textCoins;
+
+    public GameObject ClearLvl;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -26,11 +28,13 @@ public class PlayerManager : MonoBehaviour
         {
             if (key >= 1) // getting a key will unlock the door, which will remove the key and bring player to the next level and teleporting the player to a spawn point
             {
+                
                 key--;
                 Debug.Log("Keys = " + key);
-                index++;
-                //SceneManager.LoadScene(index);
-                player.transform.position = respawnLocation.position;
+                clearLevel();
+                teleportPlayer();
+                            
+                
                 //Debug.Log("You're in Level " + index);
             }
             else
@@ -41,12 +45,16 @@ public class PlayerManager : MonoBehaviour
         if (other.transform.tag == "Key") // collects keys
         {
             key++;
-            Debug.Log("Keys= " + key);
+            Debug.Log("Keys = " + key);
         }
-        DontDestroyOnLoad(this.gameObject); // keep this object when moving to different scenes
     }
     void clearLevel()
     {
+        ClearLvl.SetActive(true);
+    }
 
+    void teleportPlayer()
+    {
+        player.transform.position = respawnLocation.position;
     }
 }

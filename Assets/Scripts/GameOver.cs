@@ -10,6 +10,11 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void ExitGame()
     {
         Debug.Log("You've clicked Exit!");
