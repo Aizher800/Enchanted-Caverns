@@ -11,17 +11,14 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
 
     public Animator animator;
-    Vector2 move;
-    Rigidbody2D rb2d;
+    //Rigidbody2D rb2d;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb2d = GetComponent<Rigidbody2D>();
+        //rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
@@ -32,43 +29,49 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            animator.Play("Base Layer.IdleDown");
+            animator.SetBool("isRunning", false);
+            //animator.Play("Base Layer.IdleDown");
         }
     }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(this.transform.position, aggroRange);
+        Gizmos.DrawWireSphere(transform.position, aggroRange);
     }
 
     private void AnimationDirection()
     {
         var direction = player.position - transform.position;
- 
+
         direction.Normalize();
         bool isUp = Mathf.Abs(direction.y) > Mathf.Abs(direction.x);
 
-        if (isUp)
-        { 
+        /*if (isUp)
+        {
             if (direction.y > 0f)
             {
-                animator.Play("Base Layer.Up");
+                animator.SetBool("isRunning", true);
+                //animator.Play("Base Layer.Up");
             }
             else
             {
-                animator.Play("Base Layer.Down");
+                animator.SetBool("isRunning", true);
+                //animator.Play("Base Layer.Down");
             }
         }
-        else 
+        else
         {
             if (direction.x > 0f)
             {
-                animator.Play("Base Layer.Right");
+                animator.SetBool("isRunning", true);
+                //animator.Play("Base Layer.Right");
             }
             else
             {
-                animator.Play("Base Layer.Left");
+                animator.SetBool("isRunning", true);
+                //animator.Play("Base Layer.Left");
             }
-        }
+        }*/
+        animator.SetBool("isRunning", true);
     }
 }
