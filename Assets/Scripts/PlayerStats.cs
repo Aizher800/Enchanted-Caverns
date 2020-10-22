@@ -60,7 +60,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collide)
+    private void OnCollisionEnter2D(Collision2D collide)
     {
         if (collide.transform.tag == "Enemy")
         {
