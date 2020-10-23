@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8792667547498937340}
   - component: {fileID: 567637624}
   - component: {fileID: 145615982820725508}
+  - component: {fileID: 5028197192979383570}
   - component: {fileID: 1889855022}
   - component: {fileID: 8305428600893771377}
   m_Layer: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
   distMoved: 0.04
   deadZone: 0.4
   turnPerSec: 0.2
+  Ball: {fileID: 0}
 --- !u!114 &567637624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +139,21 @@ MonoBehaviour:
   respawnLocation: {fileID: 0}
   textCoins: {fileID: 0}
   ClearLvl: {fileID: 0}
+--- !u!114 &5028197192979383570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792667547498937338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135cb381f8d5052489f99171f7d265b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
+  Ball: {fileID: 0}
 --- !u!212 &1889855022
 SpriteRenderer:
   m_ObjectHideFlags: 0

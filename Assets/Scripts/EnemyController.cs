@@ -30,7 +30,6 @@ public class EnemyController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
-            //animator.Play("Base Layer.IdleDown");
         }
     }
     private void OnDrawGizmosSelected()
@@ -44,7 +43,7 @@ public class EnemyController : MonoBehaviour
         var direction = player.position - transform.position;
 
         direction.Normalize();
-        bool isUp = Mathf.Abs(direction.y) > Mathf.Abs(direction.x);
+        //bool isUp = Mathf.Abs(direction.y) > Mathf.Abs(direction.x);
 
         /*if (isUp)
         {

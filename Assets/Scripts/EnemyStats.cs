@@ -14,14 +14,14 @@ public class EnemyStats : MonoBehaviour
         health = maxHealth;   //sets up max health upon start of game
     }
 
-    public void DmgDealt(float damage)
+    public void DmgDealt()
     {
-        health -= damage; // any obj that triggers it to lose health, will drop its health
+        health--; // any obj that triggers it to lose health, will drop its health
         CheckDeath();
     }
-    private void HealEnemy(float heal)
+    private void HealEnemy()
     {
-        health += heal;
+        health++;
         healthOverheal();
     }
 

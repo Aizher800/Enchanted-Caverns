@@ -7735,6 +7735,12 @@ PrefabInstance:
       propertyPath: ClearLvl
       value: 
       objectReference: {fileID: 1285646952}
+    - target: {fileID: 5028197192979383570, guid: 57c111db04d160f4d9af4b39f335da73,
+        type: 3}
+      propertyPath: Ball
+      value: 
+      objectReference: {fileID: 2449781509614859792, guid: 68bffab1fbf386d4586e0ad3dbb89fb8,
+        type: 3}
     - target: {fileID: 8792667547498937338, guid: 57c111db04d160f4d9af4b39f335da73,
         type: 3}
       propertyPath: m_Name
@@ -7795,5 +7801,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8792667547498937340, guid: 57c111db04d160f4d9af4b39f335da73,
+        type: 3}
+      propertyPath: Ball
+      value: 
+      objectReference: {fileID: 2449781509614859792, guid: 68bffab1fbf386d4586e0ad3dbb89fb8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c111db04d160f4d9af4b39f335da73, type: 3}
