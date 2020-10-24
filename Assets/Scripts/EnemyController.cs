@@ -17,9 +17,12 @@ public class EnemyController : MonoBehaviour
     private float stunCountdown = 0f;
     public bool isStunned;
 
+    public GameObject enemyUI;
+    public GameObject enemyHealUI;
 
     void Start()
     {
+        enemyUI.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //rb2d = GetComponent<Rigidbody2D>();
     }
@@ -30,11 +33,13 @@ public class EnemyController : MonoBehaviour
         if (distanceFromPlayer < aggroRange && !isStunned)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, moveSpeed * Time.deltaTime);
+            enemyUI.SetActive(true);
             AnimationDirection();
         }
         else
         {
             animator.SetBool("isRunning", false);
+            enemyUI.SetActive(false);
         }
         if (isStunned)
         {
@@ -42,6 +47,11 @@ public class EnemyController : MonoBehaviour
             if (stunCountdown < 0f)
             {
                 isStunned = false;
+                enemyHealUI.SetActive(false);
+            }
+            else
+            {
+                enemyHealUI.SetActive(true);
             }
         }
     }

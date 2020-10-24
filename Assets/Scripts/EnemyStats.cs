@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -9,9 +10,16 @@ public class EnemyStats : MonoBehaviour
 
     public GameObject dropLoot;
 
+    public TextMeshProUGUI textHealth;
+
     void Start()
     {
         health = maxHealth;   //sets up max health upon start of game
+    }
+
+    private void Update()
+    {
+        textHealth.text = health.ToString();
     }
 
     public void DmgDealt()

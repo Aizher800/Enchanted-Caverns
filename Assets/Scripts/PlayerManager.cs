@@ -14,7 +14,12 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI textCoins;
 
     public GameObject ClearLvl;
+    public GameObject KeyImage;
 
+    void Start()
+    {
+        KeyImage.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,6 +35,7 @@ public class PlayerManager : MonoBehaviour
             {
                 
                 key--;
+                KeyImage.SetActive(false);
                 Debug.Log("Keys = " + key);
                 clearLevel();
                 teleportPlayer();
@@ -45,6 +51,7 @@ public class PlayerManager : MonoBehaviour
         if (other.transform.tag == "Key") // collects keys
         {
             key++;
+            KeyImage.SetActive(true);
             Debug.Log("Keys = " + key);
         }
     }
