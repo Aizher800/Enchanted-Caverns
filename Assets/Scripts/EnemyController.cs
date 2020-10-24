@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, aggroRange);
     }
 
+
     private void AnimationDirection()
     {
         var direction = player.position - transform.position;

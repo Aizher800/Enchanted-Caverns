@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-/*    public float health;
-    public float maxHealth;*/
+    public float health;
+    public float maxHealth;
 
     public GameObject dropLoot;
 
-/*    void Start()
+    void Start()
     {
         health = maxHealth;   //sets up max health upon start of game
     }
@@ -40,14 +40,24 @@ public class EnemyStats : MonoBehaviour
             Destroy(gameObject); // destroys object with no health after taking dmg
             Instantiate(dropLoot, transform.position, Quaternion.identity);
         }
-    }*/
+    }
 
     private void OnCollisionEnter2D (Collision2D other)
     {
         if (other.transform.tag == "Player")
         {
-            Destroy(gameObject);
-            Instantiate(dropLoot, transform.position, Quaternion.identity);
+            HealEnemy(); 
+            
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.transform.tag == "Ammo")
+        {
+            DmgDealt();
+            CheckDeath();
         }
     }
 }
