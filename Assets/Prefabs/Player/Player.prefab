@@ -46,8 +46,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.5980331, g: 0.8396226, b: 0.8306966, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -173,6 +173,7 @@ MonoBehaviour:
   distMoved: 0.04
   deadZone: 0.4
   turnPerSec: 0.2
+  projectileSpeed: 0.5
   Ball: {fileID: 2449781509614859792, guid: 68bffab1fbf386d4586e0ad3dbb89fb8, type: 3}
 --- !u!114 &567637624
 MonoBehaviour:

@@ -13,6 +13,11 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
     //Rigidbody2D rb2d;
 
+    public float stunTimer = 2f;
+    private float stunCountdown = 0f;
+    public bool isStunned;
+
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -22,7 +27,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < aggroRange)
+        if (distanceFromPlayer < aggroRange && !isStunned)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, moveSpeed * Time.deltaTime);
             AnimationDirection();
@@ -30,6 +35,14 @@ public class EnemyController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+        }
+        if (isStunned)
+        {
+            stunCountdown -= Time.deltaTime;
+            if (stunCountdown < 0f)
+            {
+                isStunned = false;
+            }
         }
     }
     private void OnDrawGizmosSelected()
@@ -73,5 +86,15 @@ public class EnemyController : MonoBehaviour
             }
         }*/
         animator.SetBool("isRunning", true);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            stunCountdown = stunTimer;
+            isStunned = true;
+
+        }
     }
 }
