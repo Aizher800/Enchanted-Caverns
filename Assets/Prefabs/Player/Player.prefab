@@ -208,12 +208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8792667547498937338}
   coins: 0
-  key: 0
   respawnLocation: {fileID: 0}
   textCoins: {fileID: 0}
   ClearLvl: {fileID: 0}
   KeyImage: {fileID: 0}
-  DoorUI: {fileID: 0}
 --- !u!212 &1889855022
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject Canvas;
     public GameObject mainCamera;
     public GameObject spawnPoint;
+    //public GameObject globalLight;
 
     void Start()
     {
@@ -57,6 +58,7 @@ public class PlayerStats : MonoBehaviour
             Destroy(player);
             Destroy(mainCamera);
             Destroy(spawnPoint);
+            //Destroy(globalLight);
             SceneManager.LoadScene("Game Over");
         }
     }

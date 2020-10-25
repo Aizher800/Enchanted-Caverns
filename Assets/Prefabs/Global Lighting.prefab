@@ -46,7 +46,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+  m_Color: {r: 0.4716981, g: 0.33597365, b: 0.33597365, a: 1}
   m_Intensity: 0.54
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -129,7 +129,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7206415752885980520}
-  - component: {fileID: 6844950766168736648}
   m_Layer: 0
   m_Name: Global Lighting
   m_TagString: Untagged
@@ -153,15 +152,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6844950766168736648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7206415752885980526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16f0062f29855b43946e07f0bd98718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
