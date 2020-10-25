@@ -30,15 +30,15 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < aggroRange && !isStunned)
+        if (distanceFromPlayer < aggroRange && !isStunned)  
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(this.transform.position, player.position, moveSpeed * Time.deltaTime); // enemy follows the player
             enemyUI.SetActive(true);
-            AnimationDirection();
+            AnimationDirection(); 
         }
         else
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("isRunning", false); //stops enemy from following
             enemyUI.SetActive(false);
         }
         if (isStunned)

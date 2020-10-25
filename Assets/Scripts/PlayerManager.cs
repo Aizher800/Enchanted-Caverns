@@ -9,16 +9,21 @@ public class PlayerManager : MonoBehaviour
     public GameObject player;
     public int coins = 0;
     //private int index = 1;
-    public int key;
+    public static int key;
     public Transform respawnLocation;
     public TextMeshProUGUI textCoins;
 
     public GameObject ClearLvl;
     public GameObject KeyImage;
-
+/*    public GameObject DoorUI;
+    private bool isLocked;
+    private float doorCountdown = 0f;
+    private float doorTimer = 3f;
+*/
     void Start()
     {
         KeyImage.SetActive(false);
+        //DoorUI.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -33,18 +38,17 @@ public class PlayerManager : MonoBehaviour
         {
             if (key >= 1) // getting a key will unlock the door, which will remove the key and bring player to the next level and teleporting the player to a spawn point
             {
-                
+
                 key--;
                 KeyImage.SetActive(false);
-                Debug.Log("Keys = " + key);
                 clearLevel();
                 teleportPlayer();
-                            
-                
-                //Debug.Log("You're in Level " + index);
+
+
             }
             else
             {
+                
                 Debug.Log("You are missing a key"); // can't get through door without key
             }
         }
@@ -52,7 +56,7 @@ public class PlayerManager : MonoBehaviour
         {
             key++;
             KeyImage.SetActive(true);
-            Debug.Log("Keys = " + key);
+            //Debug.Log("Keys = " + key);
         }
     }
     void clearLevel()

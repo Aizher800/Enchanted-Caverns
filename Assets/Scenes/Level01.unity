@@ -1252,6 +1252,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329209232}
   m_CullTransparentMesh: 0
+--- !u!1 &342030693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7454115147910733310, guid: 72790f1bc4b8279478f2469d53dd80f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4955209715512580205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &369348109
 GameObject:
   m_ObjectHideFlags: 0
@@ -13834,12 +13840,12 @@ PrefabInstance:
     - target: {fileID: 1746118041867391988, guid: 4aebf75979b0de443912a54fcfd141c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.694
+      value: 11.75
       objectReference: {fileID: 0}
     - target: {fileID: 1746118041867391988, guid: 4aebf75979b0de443912a54fcfd141c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.596
+      value: -6.97
       objectReference: {fileID: 0}
     - target: {fileID: 1746118041867391988, guid: 4aebf75979b0de443912a54fcfd141c1,
         type: 3}
@@ -14143,6 +14149,11 @@ PrefabInstance:
       propertyPath: KeyImage
       value: 
       objectReference: {fileID: 1633318378}
+    - target: {fileID: 145615982820725508, guid: 57c111db04d160f4d9af4b39f335da73,
+        type: 3}
+      propertyPath: DoorUI
+      value: 
+      objectReference: {fileID: 342030693}
     - target: {fileID: 8792667547498937338, guid: 57c111db04d160f4d9af4b39f335da73,
         type: 3}
       propertyPath: m_Name
@@ -14151,7 +14162,7 @@ PrefabInstance:
     - target: {fileID: 8792667547498937339, guid: 57c111db04d160f4d9af4b39f335da73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.71
+      value: -3.437
       objectReference: {fileID: 0}
     - target: {fileID: 8792667547498937339, guid: 57c111db04d160f4d9af4b39f335da73,
         type: 3}
