@@ -14,7 +14,7 @@ public class EnemyStats : MonoBehaviour
 
     void Start()
     {
-        health = maxHealth;   //sets up max health upon start of game
+        //health = maxHealth;   //sets up max health upon start of game
     }
 
     private void Update()
