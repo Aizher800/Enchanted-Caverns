@@ -715,10 +715,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: c57834cf-cded-46f2-9ce8-1f0cb14d1da1
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: DungeonCrawler
+  organizationId: fakegalore_unity
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

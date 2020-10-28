@@ -19,6 +19,8 @@ public class PlayerStats : MonoBehaviour
     public GameObject Canvas;
     public GameObject mainCamera;
     public GameObject spawnPoint;
+
+
     //public GameObject globalLight;
 
     void Start()
@@ -40,6 +42,11 @@ public class PlayerStats : MonoBehaviour
     {
         health++;
         healthOverheal();
+    }
+
+    public void ShopHeal()
+    {
+        health = maxHealth;
     }
 
     private void healthOverheal()
@@ -68,6 +75,24 @@ public class PlayerStats : MonoBehaviour
         if (collide.transform.tag == "Enemy")
         {
             DmgDealt();
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.transform.tag == "Potion")
+        {
+            if (health == 5)
+            {
+                //do nothing
+            }
+            else 
+            {
+                //destroy potion, heal player
+                HealPlayer();
+                Destroy(coll.gameObject);
+            }
+            
         }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject player;
-    public int coins = 0;
+    public static int coins = 0;
     //private int index = 1;
     public static int key;
     public Transform respawnLocation;
@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
 */
     void Start()
     {
+        coins = 0;
         KeyImage.SetActive(false);
         //DoorUI.SetActive(false);
     }

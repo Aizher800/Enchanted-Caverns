@@ -25,7 +25,6 @@ public class EnemyStats : MonoBehaviour
     public void DmgDealt()
     {
         health--; // any obj that triggers it to lose health, will drop its health
-        CheckDeath();
     }
     private void HealEnemy()
     {

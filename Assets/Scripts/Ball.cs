@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
         if (collision.transform.tag == "Enemy")
         {
             Destroy(gameObject);
-            Debug.Log("Ball Collided Enemy");
+            //Debug.Log("Ball Collided Enemy");
         }
 
 
@@ -21,6 +21,12 @@ public class Ball : MonoBehaviour
             Destroy(gameObject);
             //Debug.Log("Ball Collided Wall");
         }
+
+        if (collision.transform.tag == "Chest")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }

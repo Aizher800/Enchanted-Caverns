@@ -9,7 +9,14 @@ public class DestroyObjs : MonoBehaviour
     {
         if (coll.transform.tag == "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D colli)
+    {
+        if (colli.transform.tag == "Player")
+        {
+            Destroy(gameObject);
         }
     }
 }

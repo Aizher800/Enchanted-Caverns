@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Ammo
   - Wall
+  - Potion
   layers:
   - Default
   - TransparentFX
