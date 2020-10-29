@@ -12,8 +12,8 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats playerStats;
 
     public GameObject player;
-    public float health;
-    public float maxHealth;
+    public static float health;
+    public static float maxHealth = 5f;
     public TextMeshProUGUI textHealth;
 
     public GameObject Canvas;

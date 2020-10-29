@@ -7,11 +7,13 @@ public class NextLevelAndShopUI : MonoBehaviour
 {
     public GameObject shopTab;
     public GameObject ClearLvlUI;
+    public GameObject AdUI;
     public int index = 1;
 
     public void shopOpen()
     {
         shopTab.SetActive(true);
+        AdUI.SetActive(true);
     }
 
     public void continueLevel()
