@@ -1075,9 +1075,9 @@ RectTransform:
   m_Father: {fileID: 1209580081}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0000038146973, y: 75.600006}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -319, y: -47}
   m_SizeDelta: {x: 188, y: 43.07901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288370282
@@ -1544,9 +1544,9 @@ RectTransform:
   m_Father: {fileID: 1209580081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 309.7, y: 75.6}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -47}
   m_SizeDelta: {x: 188, y: 43.07901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369348111
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_Color: {r: 1, g: 0.8295549, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.64705884, b: 0.06666667, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4236,9 +4236,9 @@ RectTransform:
   m_Father: {fileID: 924449504}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 76, y: 75}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -87, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633318380
@@ -4748,6 +4748,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7206415752324669433, guid: ecdffcf60a1826a43a96b9f6c8a7dfb9,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.57
+      objectReference: {fileID: 0}
     - target: {fileID: 7206415752885980520, guid: ecdffcf60a1826a43a96b9f6c8a7dfb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13816,6 +13821,8 @@ Tilemap:
   - m_RefCount: 175
     m_Data: {fileID: -2653462120342444952, guid: 9c8300b00b7f3b14eb216b0c3cdcf312,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 175
     m_Data:
@@ -14216,12 +14223,12 @@ PrefabInstance:
     - target: {fileID: 4955209716926912575, guid: 72790f1bc4b8279478f2469d53dd80f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4955209716926912575, guid: 72790f1bc4b8279478f2469d53dd80f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3900003
+      value: 0.524
       objectReference: {fileID: 0}
     - target: {fileID: 4955209716926912575, guid: 72790f1bc4b8279478f2469d53dd80f6,
         type: 3}
