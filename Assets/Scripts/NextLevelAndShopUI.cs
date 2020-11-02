@@ -7,13 +7,14 @@ public class NextLevelAndShopUI : MonoBehaviour
 {
     public GameObject shopTab;
     public GameObject ClearLvlUI;
-    public GameObject AdUI;
-    public int index = 1;
+    //public GameObject AdUI;
+    private int index = 1;
 
     public void shopOpen()
     {
         shopTab.SetActive(true);
-        AdUI.SetActive(true);
+        //AdUI.SetActive(true);
+        ClearLvlUI.SetActive(false);
     }
 
     public void continueLevel()
@@ -22,5 +23,6 @@ public class NextLevelAndShopUI : MonoBehaviour
         SceneManager.LoadScene(index);
         ClearLvlUI.SetActive(false);
         shopTab.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

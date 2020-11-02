@@ -9,16 +9,14 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
 
-    public static PlayerStats playerStats;
-
     public GameObject player;
     public static float health;
     public static float maxHealth = 5f;
     public TextMeshProUGUI textHealth;
-
     public GameObject Canvas;
     public GameObject mainCamera;
     public GameObject spawnPoint;
+
 
 
     //public GameObject globalLight;
@@ -86,13 +84,13 @@ public class PlayerStats : MonoBehaviour
             {
                 //do nothing
             }
-            else 
+            else
             {
                 //destroy potion, heal player
                 HealPlayer();
                 Destroy(coll.gameObject);
             }
-            
+
         }
     }
 }

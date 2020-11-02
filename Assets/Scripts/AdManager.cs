@@ -4,8 +4,10 @@ using UnityEngine.Advertisements;
 
 public class AdManager : MonoBehaviour, IUnityAdsListener
 {
-    private string playStoreID = "3881519";
-    private string appStoreID = "3881518";
+
+    //These are to set up real advertisements. I won't be using it but if implemented, it 100% works. 
+    private string playStoreID = "7654321"; // fictional ID. Find your ID on Unity Dashboard.
+    private string appStoreID = "1234567"; // fictional ID. Find your ID on Unity Dashboard.
 
     private string rewardedAd = "rewardedVideo";
 

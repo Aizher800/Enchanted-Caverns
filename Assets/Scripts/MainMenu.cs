@@ -40,6 +40,6 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Debug.Log("You've clicked Exit!");
-        //Application.Quit();
+        Application.Quit();
     }
 }
