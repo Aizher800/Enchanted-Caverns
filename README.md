@@ -23,4 +23,5 @@ To build, open the project in Unity 2019.4.1
 
 ## Licensing 
 Enchanted Caverns is protected under GNU General Public License v3.0
+
 Please read the [License](https://github.com/Aizher800/Enchanted-Caverns/blob/main/LICENSE) for more information.
