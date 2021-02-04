@@ -12,7 +12,7 @@ git clone https://github.com/Aizher800/Enchanted-Caverns.git
 ```
 ## Play
 
-To play the current version, go to the [Releases](https://github.com/Aizher800/Enchanhted-Caverns/releases)
+To play the current version, go to the [Releases](https://github.com/Aizher800/Enchanted-Caverns/releases)
 and select v0.1.0
 *  Available for Android only
 
